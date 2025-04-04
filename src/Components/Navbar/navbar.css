@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+}
+a {
+  font-size: 20px;
+  color: white;
+  &:hover {
+    color: #66fcf1;
+  }
+}

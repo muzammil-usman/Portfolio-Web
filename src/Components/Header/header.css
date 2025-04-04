@@ -1,0 +1,49 @@
+:root {
+  --mainColor: black;
+  --fontColor: white;
+  --primaryColor: #27445d;
+  --secondaryColor: #66fcf1;
+  --h1fontsize: 6rem;
+  --h2fontsize: 4rem;
+  --h3fontsize: 2rem;
+}
+
+.landing {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 100px;
+}
+
+.headings {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+
+.hi {
+  font-size: var(--h3fontsize);
+  color: var(--fontColor);
+  text-transform: none;
+}
+
+.muzammil {
+  font-size: var(--h1fontsize);
+  color: var(--secondaryColor);
+}
+
+p {
+  color: var(--fontColor);
+  font-size: var(--h2fontsize);
+}
+
+.dp {
+  width: 30%;
+  height: 400px;
+  display: flex;
+  background: url(../Assets/profile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
