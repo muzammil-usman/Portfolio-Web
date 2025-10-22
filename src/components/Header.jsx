@@ -88,7 +88,7 @@ const Header = () => {
                 className="font-bold text-xl text-[#EEEEEE] tracking-tight"
                 style={{ fontFamily: "Inter, sans-serif" }}
               >
-                Portfolio
+                Muzammil Usman
               </span>
               <span
                 className="text-xs text-[#B7B89F]"

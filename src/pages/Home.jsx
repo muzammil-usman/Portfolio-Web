@@ -1,6 +1,8 @@
 // src/pages/Home.jsx
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import myImage from "../assets/image.jpg";
+
 import {
   ArrowRight,
   Github,
@@ -8,7 +10,6 @@ import {
   Mail,
   Download,
   Sparkles,
-  Code2,
 } from "lucide-react";
 import gsap from "gsap";
 import CustomCursor from "../components/CustomCursor";
@@ -147,23 +148,25 @@ const Home = () => {
                 <Sparkles className="w-4 h-4 text-[#777C6D]" />
               </div>
 
-              {/* Main Title */}
-              <div className="space-y-4">
+              {/* Main Title - Better Styling */}
+              <div className="space-y-2">
                 <h1
                   ref={(el) => addToTitleRefs(el)}
-                  className="text-4xl lg:text-6xl font-bold text-[#EEEEEE] leading-tight"
+                  className="text-2xl lg:text-3xl font-light text-[#CBCBCB] tracking-wide"
                 >
-                  I am
+                  Hello, I am
                 </h1>
+
                 <h1
                   ref={(el) => addToTitleRefs(el)}
                   className="shimmer-text text-4xl lg:text-6xl font-bold bg-linear-to-r from-[#777C6D] via-[#B7B89F] to-[#CBCBCB] bg-size-[200%_auto] bg-clip-text text-transparent leading-tight"
                 >
                   Muzammil Usman
                 </h1>
+
                 <h1
                   ref={(el) => addToTitleRefs(el)}
-                  className="text-4xl lg:text-6xl font-bold text-[#EEEEEE] leading-tight"
+                  className="text-2xl lg:text-4xl font-semibold text-[#EEEEEE] leading-relaxed"
                 >
                   Frontend Web Developer
                 </h1>
@@ -172,7 +175,7 @@ const Home = () => {
               {/* Description */}
               <p
                 ref={textRef}
-                className="text-xl text-[#CBCBCB] leading-relaxed max-w-2xl"
+                className="text-lg text-[#CBCBCB] leading-relaxed max-w-2xl mt-6"
               >
                 I specialize in creating{" "}
                 <span className="text-[#777C6D] font-semibold">beautiful</span>,
@@ -190,7 +193,7 @@ const Home = () => {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-8">
                 <Link
                   ref={addToButtonRefs}
                   to="/projects"
@@ -213,7 +216,7 @@ const Home = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start gap-4">
+              <div className="flex justify-center lg:justify-start gap-4 mt-8">
                 {[
                   {
                     icon: Github,
@@ -254,17 +257,24 @@ const Home = () => {
                 {/* Main Image Container */}
                 <div className="absolute inset-0 bg-linear-to-br from-[#777C6D] to-[#B7B89F] rounded-3xl opacity-20 animate-pulse"></div>
 
-                <div className="absolute inset-4 bg-[#222222] rounded-3xl flex items-center justify-center border border-[#777C6D]/20">
-                  <div className="w-64 h-64 bg-[#2a2a2a] rounded-2xl overflow-hidden border-2 border-[#777C6D]/30 relative group">
-                    {/* Your Image */}
+                <div className="absolute inset-4 bg-[#222222] rounded-3xl flex items-center justify-center border border-[#777C6D]/20 overflow-hidden">
+                  {/* Your Image - Full Cover */}
+                  <div className="w-full h-full relative group">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format&q=80"
+                      src={myImage}
                       alt="Muzammil Usman"
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      className=" object-contain group-hover:scale-110 transition-transform duration-700"
                     />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-linear-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
+
+                    {/* Name Overlay */}
+                    <div className="absolute bottom-4 left-4 right-4 text-center">
+                      <span className="text-[#EEEEEE] text-sm font-semibold bg-[#1a1a1a]/80 backdrop-blur-sm px-3 py-1 rounded-full">
+                        Muzammil Usman
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -282,7 +292,7 @@ const Home = () => {
                   color="#B7B89F"
                 />
                 <FloatingBadge
-                  text="GSAP"
+                  text="Firebase"
                   position="middle"
                   side="left"
                   color="#CBCBCB"
@@ -379,12 +389,12 @@ const SkillsSection = () => {
   }, []);
 
   const skills = [
-    { name: "React & Next.js", level: 95, color: "#777C6D" },
+    { name: "React Development", level: 95, color: "#777C6D" },
     { name: "JavaScript", level: 90, color: "#B7B89F" },
-    { name: "GSAP Animation", level: 88, color: "#CBCBCB" },
-    { name: "Tailwind CSS", level: 85, color: "#777C6D" },
-    { name: "Firebase", level: 92, color: "#B7B89F" },
-    { name: "Responsive Design", level: 94, color: "#CBCBCB" },
+    { name: "Smooth Animations", level: 88, color: "#CBCBCB" },
+    { name: "Tailwind CSS", level: 92, color: "#777C6D" },
+    { name: "Responsive Design", level: 94, color: "#B7B89F" },
+    { name: "UI/UX Design", level: 85, color: "#CBCBCB" },
   ];
 
   const addToSkillRefs = (el) => {
@@ -404,7 +414,7 @@ const SkillsSection = () => {
             </span>
           </h2>
           <p className="text-xl text-[#CBCBCB] max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
+            Technologies and tools I use to create amazing web experiences
           </p>
         </div>
 
