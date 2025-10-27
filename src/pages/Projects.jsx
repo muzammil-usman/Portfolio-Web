@@ -64,10 +64,10 @@ const Projects = () => {
         "A responsive portfolio website showcasing my projects and skills with modern animations.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&auto=format&q=80",
-      technologies: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
+      technologies: ["React", "Tailwind CSS", "GSAP", "Vite"],
       category: "web",
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://muzammilusman.netlify.app/",
+      githubUrl: "https://github.com/muzammil-usman/Portfolio-Web",
       accentColor: "#777C6D",
     },
     {
